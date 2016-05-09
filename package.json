@@ -1,0 +1,32 @@
+{
+  "name": "paymew-payment",
+  "version": "1.0.0",
+  "description": "The html page of PayMew payment. ",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h5bp/mobile-boilerplate.git"
+  },
+  "author": "Dong Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h5bp/mobile-boilerplate/issues"
+  },
+  "homepage": "https://github.com/h5bp/mobile-boilerplate#readme",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-minify": "^0.0.7",
+    "jshint": "^2.9.1"
+  }
+}

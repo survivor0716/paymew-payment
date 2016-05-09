@@ -1,0 +1,148 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  height: 100%;
+  body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+  }
+}
+
+section {
+  width: 100%;
+  .row {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    -webkit-box-align: center;
+  }
+  .row1 {
+    .left {
+      width: 1rem;
+      height: 1rem;
+      padding: .1rem;
+      border-radius: .1rem;
+      span {
+        width: 100%;
+        height: 100%;
+        background: url("../img/home.png") no-repeat center center;
+        background-size: 100%;
+      }
+    }
+    .right {
+      height: 1rem;
+      width: 5.4rem;
+      padding: .1rem;
+      .storeName {
+        font-size: .3rem;
+        height: .5rem;
+        color: #333333;
+      }
+      .storeType {
+        font-size: .24rem;
+        height: .3rem;
+        color: #999;
+      }
+    }
+  }
+  .row2 {
+    position: relative;
+    margin-top: .2rem;
+    .inputArea {
+      border: 1px solid #c1c1c1;
+      display: block;
+      width: 100%;
+      height: 1rem;
+      border-radius: 4px;
+      text-align: right;
+      padding: 0 .3rem 0 1rem;
+      font-size: .6rem;
+      background-color: #ffffff;
+      line-height: 1rem;
+      span {
+        position: absolute;
+        top: 0;
+        left: .3rem;
+        font-size: .28rem;
+        color: #666;
+      }
+      .amount {
+
+      }
+    }
+  }
+  .row3 {
+    text-align: center;
+    hr {
+      background-color: #999;
+      border: 0;
+      width: 20%;
+      height: 1px;
+      margin-top: .49rem;
+    }
+    .slogen {
+      width: 60%;
+      height: 1rem;
+      line-height: 1rem;
+      color: #999;
+      font-size: .24rem;
+    }
+  }
+}
+
+footer {
+  .inputNumberPanel {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    tr {
+      td {
+        background-color: #ffffff;
+        width: 1.6rem;
+        height: 1.2rem;
+        border: solid 1px #d1d1d1;
+        text-align: center;
+        font-size: .48rem;
+        &:active {
+          background-color: #ebebeb;
+        }
+      }
+      .btnDel {
+        background: url("../img/minus.png") no-repeat center center;
+        background-size: 50%;
+        background-color: #ffffff;
+      }
+      .btnPay {
+        color: #ffffff;
+        background-color: #d1d1d1;
+        &:active {
+          background-color: #d1d1d1;
+        }
+        span {
+          font-size: 0.42rem;
+        }
+      }
+      .btnPay.active {
+        background-color: #f9800f;
+        &:active {
+          background-color: #D56E0D;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+<!doctype html>
+<html class="no-js" lang="" data-use-rem="640">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="cleartype" content="on">
+
+  <!-- iPad and iPad mini (with @2× display) iOS ≥ 8 -->
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="img/touch/apple-touch-icon-180x180-precomposed.png">
+  <!-- iPad 3+ (with @2× display) iOS ≥ 7 -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/touch/apple-touch-icon-152x152-precomposed.png">
+  <!-- iPad (with @2× display) iOS ≤ 6 -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/touch/apple-touch-icon-144x144-precomposed.png">
+  <!-- iPhone (with @2× and @3 display) iOS ≥ 7 -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/touch/apple-touch-icon-120x120-precomposed.png">
+  <!-- iPhone (with @2× display) iOS ≤ 6 -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/touch/apple-touch-icon-114x114-precomposed.png">
+  <!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7 -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/touch/apple-touch-icon-76x76-precomposed.png">
+  <!-- iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6 -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/touch/apple-touch-icon-72x72-precomposed.png">
+  <!-- Android Stock Browser and non-Retina iPhone and iPod Touch -->
+  <link rel="apple-touch-icon-precomposed" href="img/touch/apple-touch-icon-57x57-precomposed.png">
+  <!-- Fallback for everything else -->
+  <link rel="shortcut icon" href="img/touch/apple-touch-icon.png">
+
+  <!--
+      Chrome 31+ has home screen icon 192×192 (the recommended size for multiple resolutions).
+      If it’s not defined on that size it will take 128×128.
+  -->
+  <link rel="icon" sizes="192x192" href="img/touch/touch-icon-192x192.png">
+  <link rel="icon" sizes="128x128" href="img/touch/touch-icon-128x128.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="img/touch/apple-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#222222">
+
+  <!-- SEO: If mobile URL is different from desktop URL, add a canonical link to the desktop page -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/" >
+  -->
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <!--
+  <meta name="mobile-web-app-capable" content="yes">
+  -->
+
+  <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->
+  <!--
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="">
+  -->
+
+  <!-- This script prevents links from opening in Mobile Safari. https://gist.github.com/1042026 -->
+  <!--
+  <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+  -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Latest compiled and minified CSS -->
+  <!--<link rel="stylesheet"-->
+        <!--href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+        <!--integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"-->
+        <!--crossorigin="anonymous">-->
+  <link rel="stylesheet" href="css/less.css"/>
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+<!-- Add your site or application content here -->
+<section>
+  <div class="row row1">
+    <div class="left">
+      <span class="headImg" id="headImg"></span>
+    </div>
+    <div class="right">
+      <p class="storeName"></p>
+
+      <p class="storeType">财喵合作商户</p>
+    </div>
+  </div>
+  <div class="row row2">
+    <div class="inputArea">
+      <span>金额</span>
+      <div class="amount" id="paymentAmount"></div>
+    </div>
+  </div>
+  <div class="row row3">
+    <hr/>
+    <div class="slogen">财喵 · PayMew</div>
+    <hr/>
+  </div>
+</section>
+<footer>
+  <table class="inputNumberPanel">
+    <tbody>
+    <tr>
+      <td class="btn1">1</td>
+      <td class="btn2">2</td>
+      <td class="btn3">3</td>
+      <td class="btnDel"></td>
+    </tr>
+    <tr>
+      <td class="btn4">4</td>
+      <td class="btn5">5</td>
+      <td class="btn6">6</td>
+      <td class="btnPay" id="payNow" rowspan="3">
+        <span>确认<br/>支付</span>
+    </tr>
+    <tr>
+      <td class="btn7">7</td>
+      <td class="btn8">8</td>
+      <td class="btn9">9</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="btn0">0</td>
+      <td class="btnDot">.</td>
+    </tr>
+    </tbody>
+  </table>
+</footer>
+
+<script src="js/helper.js"></script>
+<script src="js/vendor/jquery-2.1.3.min.js"></script>
+<script src="js/vendor/zepto.min.js"></script>
+<script src="js/vendor/fastclick.js"></script>
+<script src="js/rem.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
