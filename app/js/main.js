@@ -19,7 +19,24 @@ Zepto(function ($) {
   //        }
   //      });
   var storeName = GetQueryString('name') || null,
-      auth = GetQueryString('auth') || null;
+      auth = GetQueryString('auth') || null,
+      env = GetQueryString('env') || null,
+      formalUrl = 'http://webserver.paymew.com/wechatpay/unifiedOrder',
+      devUrl = 'http://webserver.dev.paymew.com/wechatpay/unifiedOrder',
+      testUrl = 'http://webserver.test.paymew.com/wechatpay/unifiedOrder';
+
+  var url;
+  switch(env) {
+    case 'TEST':
+      url = testUrl;
+      break;
+    case 'DEV':
+      url = devUrl;
+      break;
+    default:
+      url = formalUrl;
+  }
+
   $('title').html(storeName);
   var section = $('section');
   var footer = $('footer');
@@ -104,7 +121,7 @@ Zepto(function ($) {
       return;
     }
     request = $.ajax({
-      url    : 'http://test.webserver.paymew.com/wechatpay/unifiedOrder/jsapi',
+      url    : url + '/jsapi',
       type   : 'POST',
       data   : {
         auth: auth,
@@ -165,7 +182,7 @@ Zepto(function ($) {
       },
       function (res) {
         if (res.err_msg === "get_brand_wcpay_request:ok") {
-          window.location.href = '/web/payment_success';
+          window.location.href = 'http://h5.paymew.com/PaySuccess/';
         } // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回ok，但并不保证它绝对可靠。
         else {
           //alert(res.err_msg);
